@@ -1,33 +1,32 @@
-
 import "./App.css";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="container-1">
-          <nav>
-            <ul>
+      <header className="App-header text-zinc-50 flex justify-between flex-col">
+        <div className="ssn-contacts text-xl bg-teal-950 grid grid-cols-4">
+          <nav className="col-start-5 m-4">
+            <ul className="flex flex-initial flex-row gap-8">
               <li>
-                <a href="Facebook"><FaFacebook /></a>
+                <a href="Facebook">
+                  <FaFacebook />
+                </a>
               </li>
               <li>
-                <a href="Instagram"><FaInstagram /></a>
+                <a href="Instagram">
+                  <FaInstagram />
+                </a>
               </li>
               <li>
-                <a href="Twitter"><FaTwitter /></a>
-              </li>
-              <li>
-                <a href="#team">Our Team</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
+                <a href="Twitter">
+                  <FaTwitter />
+                </a>
               </li>
             </ul>
           </nav>
         </div>
-        <div className="container-2">
+        <div className="container-2 grid row-start-1 col-span-5 row-span-2">
           <nav>
             <ul>
               <li>
