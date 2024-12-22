@@ -29,12 +29,12 @@ export default function Hamburger() {
 
       {toggle && (
         <div
-          className="fixed inset-0 z-50 h-screen w-screen flex justify-center items-center"
+          className="fixed inset-0 h-screen w-screen flex justify-center items-center"
           onClick={(e) => closeModal(e)}
         >
           <div
             ref={hamburgerMenu}
-            className="hamburger-menu fixed slide-in-from-right z-50 absolute w-60 pl-5 h-dvh text-zinc-200 top-14 right-0 bg-emerald-950"
+            className="hamburger-menu fixed slide-in-from-right absolute w-60 pl-5 h-dvh text-zinc-200 top-14 right-0 bg-emerald-950"
           >
             <NavLinks withinHamburger={true} />
           </div>
