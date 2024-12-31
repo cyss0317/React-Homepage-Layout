@@ -10,7 +10,7 @@ export default function Hamburger() {
     setToggle(true);
     hamburgerMenu.current?.classList.toggle("slide-out-to-right");
     hamburgerMenu.current?.classList.toggle("slide-in-from-right");
-  }
+  };
 
   const closeModal = (e: React.MouseEvent) => {
     setToggle(false);
@@ -32,8 +32,8 @@ export default function Hamburger() {
           className="fixed inset-0 h-screen w-screen flex justify-center items-center"
           onClick={(e) => {
             e.stopPropagation();
-            closeModal(e)}
-          }
+            closeModal(e);
+          }}
         >
           <div
             ref={hamburgerMenu}

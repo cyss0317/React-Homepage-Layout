@@ -36,9 +36,13 @@ export default function ObserveAppear({
     }
 
     return () => {
-      observer.disconnect(); 
+      observer.disconnect();
     };
   }, []);
 
-  return <div ref={containerRef} className="observer">{children}</div>;
+  return (
+    <div ref={containerRef} className="observer">
+      {children}
+    </div>
+  );
 }
