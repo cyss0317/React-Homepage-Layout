@@ -12,17 +12,18 @@ export default function NavLinks(props: NavLinksProps) {
   const navClass = withinHamburger
     ? "flex-col gap-2"
     : "sm:flex hidden flex-row gap-6 ";
+
   const animationClass = withinHamburger
     ? "slide-in-from-right"
     : "pop-from-bottom-delay";
-  // const backgroundColor =
-  const textColor = withinHamburger ? "text-teal-900" : "text-zinc-50";
-  const navLists = Object.keys(articles);
+
+  const navListKeys = Object.keys(articles);
+
   return (
     <nav className={`flex align ${animationClass}`}>
       <ul className={`flex flex-initial align items-center ${navClass}`}>
-        {navLists.map((navList) => {
-          const navInfo = articles[navList];
+        {navListKeys.map((navListKey) => {
+          const navInfo = articles[navListKey];
           return (
             <NavLink
               key={`${navInfo.header}`}

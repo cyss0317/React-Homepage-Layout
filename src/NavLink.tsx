@@ -1,5 +1,3 @@
-import { ArticleType } from "./articles";
-
 interface NavLinkProps {
   title: string;
   href: string;
