@@ -8,7 +8,10 @@ export default function Article(props: ArticleProps) {
   const { article } = props;
 
   return (
-    <section id={article.title.toLowerCase()} className="scroll-mt-14">
+    <section
+      id={article.title.toLowerCase()}
+      className="scroll-mt-20 invisible"
+    >
       <div className="flex flex-col gap-4 md:gap-6">
         <h2 className="text-3xl text-bold">{article.header}</h2>
         {article.photoPosition === "left" && (

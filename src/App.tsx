@@ -3,6 +3,7 @@ import Article from "./Article";
 import { articles } from "./articles";
 import Footer from "./Footer";
 import Header from "./Header";
+import ObserveAppear from "./ObserveSlideIn";
 
 function App() {
   const articleNames = Object.keys(articles);
@@ -11,10 +12,12 @@ function App() {
     <>
       <Header />
       <div className="flex flex-col gap-8 p-6 md:p-8 slide-in-from-right text-lg relative z-negative">
-        {articleNames.map((articleName: string) => {
-          const articleInfo = articles[articleName];
-          return <Article key={articleInfo.header} article={articleInfo} />;
-        })}
+        <ObserveAppear>
+          {articleNames.map((articleName: string) => {
+            const articleInfo = articles[articleName];
+            return <Article article={articleInfo} key={articleInfo.header} />;
+          })}
+        </ObserveAppear>
       </div>
       <Footer />
     </>
