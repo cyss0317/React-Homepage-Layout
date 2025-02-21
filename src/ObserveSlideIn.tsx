@@ -31,7 +31,6 @@ export default function ObserveAppear({
     if (container) {
       // Observe each child of the container
       const elements = container.querySelectorAll(".invisible");
-      console.log(elements);
       elements.forEach((element) => observer.observe(element));
     }
 

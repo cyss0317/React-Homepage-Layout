@@ -20,7 +20,7 @@ export default function NavLinks(props: NavLinksProps) {
   const navListKeys = Object.keys(articles);
 
   return (
-    <nav className={`flex align ${animationClass}`}>
+    <nav className={`flex align justify-center ${animationClass}`}>
       <ul className={`flex flex-initial align items-center ${navClass}`}>
         {navListKeys.map((navListKey) => {
           const navInfo = articles[navListKey];
