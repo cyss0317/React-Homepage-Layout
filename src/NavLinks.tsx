@@ -16,6 +16,10 @@ export default function NavLinks(props: NavLinksProps) {
   const animationClass = withinHamburger
     ? "slide-in-from-right"
     : "pop-from-bottom-delay";
+  
+  const FacebookIcon = FaFacebook as unknown as React.ElementType;
+  const InstagramIcon = FaInstagram as unknown as React.ElementType;
+  const TwitterIcon = FaTwitter as unknown as React.ElementType;
 
   const navListKeys = Object.keys(articles);
 
@@ -34,17 +38,17 @@ export default function NavLinks(props: NavLinksProps) {
         })}
         <li className="hover:scale-125">
           <a href="Facebook">
-            <FaFacebook />
+            <FacebookIcon />
           </a>
         </li>
         <li className="hover:scale-125">
           <a href="Instagram">
-            <FaInstagram />
+            <InstagramIcon />
           </a>
         </li>
         <li className="hover:scale-125">
           <a href="Twitter">
-            <FaTwitter />
+            <TwitterIcon />
           </a>
         </li>
       </ul>

@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks";
 export default function Hamburger() {
   const [toggle, setToggle] = useState<Boolean>(false);
   const hamburgerMenu = useRef<HTMLDivElement>(null);
+  const HamburgerIcon = GiHamburgerMenu as unknown as React.ElementType;
 
   const openModal = () => {
     setToggle(true);
@@ -20,9 +21,9 @@ export default function Hamburger() {
 
   return (
     <div className="hamburger-container relative">
-      <GiHamburgerMenu
+      <HamburgerIcon
         className="sm:hidden pop-from-bottom-delay hover:scale-125 hover:text-zinc-200 hover:cursor-pointer"
-        onClick={(e) => {
+        onClick={() => {
           setToggle((prev) => !prev);
         }}
       />
